@@ -1,13 +1,11 @@
 {
-    "require": {
-        "atk4/ui": "^1.1"
-    },
-    "autoload":{
-        "psr-0":{
-            "": ["lib/"]
+    "autoload": {
+        "psr-4": {
+            "":"src/"
         }
     },
-	"require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-	}
+  "require":{
+    "atk4/ui": "*",
+        "twilio/sdk": "^5.15"
+  }
 }
