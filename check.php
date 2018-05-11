@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 require 'connection.php';
 if((isset($_SESSION['hash']))&&($_SESSION['hash']=='utftf')){
   header('Location:admin.php');

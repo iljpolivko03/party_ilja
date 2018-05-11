@@ -1,5 +1,5 @@
 <?php
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 require 'connection.php';
 $app = new \atk4\ui\App("Enter password");
 $app->initLayout("Admin");
