@@ -10,6 +10,7 @@ session_start();
 $form=$app->layout->add('Form');
 $form->setModel(new Friends($db));
 $form->onSubmit(function ($form) {
+  /*
   $notifier = new \atk4\ui\jsNotify();
 
    $notifier->setColor('red')
@@ -22,11 +23,12 @@ $form->onSubmit(function ($form) {
 
             ->setTransition('fade')
 
-            ->setIcon('wheelchair');
+            ->setIcon('wheelchair');*/
   $_SESSION['name'] = $form->model['name'];
   if($form->model['age']>14){
   $form->model->save();
-  return $notifier;
+  return new \atk4\ui\jsExpression('document.location="success.php" ');
+
   //return $form->success('Record updated');
 }else{
 //  return $form->error('Увы, ты не подходишь');
